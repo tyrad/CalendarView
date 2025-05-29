@@ -29,7 +29,7 @@ struct MonthView: View {
 }
 private extension MonthView {
     func createSingleRow(_ dates: [Date]) -> some View {
-        HStack(spacing: config.daysSpacing.horizontal) {
+        HStack(alignment: .top, spacing: config.daysSpacing.horizontal) {
             ForEach(dates, id: \.self, content: createDayView)
         }
     }
